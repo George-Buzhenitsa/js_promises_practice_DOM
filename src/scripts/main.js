@@ -11,11 +11,11 @@ function firstPromise() {
       }
     };
 
-    pageDocument.addEventListener('mouseover', handler);
+    pageDocument.addEventListener('mousedown', handler);
 
     setTimeout(() => {
       reject(new Error());
-      pageDocument.removeEventListener('mouseover', handler);
+      pageDocument.removeEventListener('mousedown', handler);
     }, 3000);
   });
 }
